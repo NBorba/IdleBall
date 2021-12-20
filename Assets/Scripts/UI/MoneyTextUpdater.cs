@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class GameMoneyUI : MonoBehaviour
+public class MoneyTextUpdater : MonoBehaviour
 {
-    private TextMeshProUGUI gameMoneyText;
+    private PlayerData playerData = new PlayerData();
+
+    public TextMeshProUGUI moneyText;
 
     // Start is called before the first frame update
     void Start()
     {
-        gameMoneyText = GetComponent<TextMeshProUGUI>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        gameMoneyText.text = new GameData().Money.ToString();
+        moneyText.text = "$" + playerData.Money.ToString();
     }
 }
