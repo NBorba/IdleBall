@@ -14,7 +14,7 @@ public class BallInstantiator : MonoBehaviour
     void Start()
     {
         playerData.Balls = 1;
-        playerData.Money = 200f;
+        //playerData.Money = 200f;
         playerData.CriticalChance = 10f / 100f; // 10% chance
     }
 
